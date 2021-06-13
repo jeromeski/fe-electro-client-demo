@@ -1,73 +1,184 @@
-$font_0: "Roboto";
-$font_1: "Titillium Web";
+// Color System
+// =========================================================
 
-//colors
-$theme-deafult: #ff4c3b;
-$white: #ffffff;
-$white-dark: #eeeeee;
-$black: #000000;
-$grey01:#111111;
-$dark-font: #222222;
-$grey-dark: #2d2a25;
-$font-color:#333333;
-$grey: #777777;
-$grey-light: #a1a1a1;
-$border:#dddada;
-$round-border: #dddddd;
-$grey-lighter: #f9f9f9;
-$theme-deafult: #ff4c3b;
-$grey-darken: #393230;
-$grey-link: #948e8c;
-$grey-font: #938d8c;
-$dark-footer: #2e2726;
-$form-bg: #f5f2f2;
-$grey-shade: #7f786d;
-$darker-footer: #25221e;
-$border-color: #38352f;
-$border-grey: #f1f5f4;
-$font-grey: #aaaaaa;
-$star-yellow: #ffa200;
-$border-bottom-g:#525252;
-$top-header: #f8f8f8;
-$header-font: #999999;
-$shadow: #ededed;
-$box-border: #ecececa8;
-$grey-about: #f7f7f7;
-$grey2:#555555;
-$grey3: #efefef;
-$grey4: #444444;
-$grey5: #888888;
-$grey6:#6f6f6f;
-$grey7:#40494f;
-$grey8:#c0c0c0;
-$sidebar-border: #f5f2f2;
-$sidebar-color:#938d8c;
-$modal: #ffba00;
-$bg-color: #d0edff;
-$bg-color1: #f1e7e6;
-$bg-color2: #bfbfbf;
-$light-grey: #d0edff;
-$pink: #f1e7e6;
-$blue: #bfbfbf;
-$icon: #6f6f6f;
-$color-red:#ff4c3b;
-$gradient1: #01effc;
-$gradient2: #485ff2;
-$left-sidebar: #2b2b2b;
-
-// dark layput variable //
-$dark-body:#2b2b2b;
-$dark-top:#232323;
-$dark-border:#404040;
-$dark-link:#cbcbcb;
-$dark-span:#929292;
-$dark-footer-bg:#383838;
+// Grays
+$gray-20:                                                   #e8e8e8;
+$gray-30:                                                   #a0a0a0;
+$gray-40:                                                   #cad5d5;
+$gray-50:                                                   #959595;
+$gray-60:                                                   #6b6b6b;
+$gray-70:                                                   #334141;
+$gray-80:                                                   #dddddd;
+$gray-90:                                                   #333e48 ; //body color
+$gray-1000:                                                 #b0b5b9;
+$gray-2000:                                                 #f5f5f5;
+$gray-3000:                                                 #bcbcbc;
+$gray-4000:                                                 #383838;
+$gray-5000:                                                 #eeeeee;
+$gray-6000:                                                 #e6e6e6;
+$gray-7000:                                                 #343f49;
+$gray-8000:                                                 #878787;
+$gray-9000:                                                 #848484;
+$gray-10000:                                                #f9f9f9;
+$gray-11000:                                                #7b8186;
+$gray-12000:                                                #8f8f8f;
+$gray-13000:                                                #f8f8f8;
+$gray-14000:                                                #eaeaea;
+$gray-15000:                                                #7c7c7c;
+$gray-16000:                                                #9d9c9c;
+$gray-17000:                                                #606060;
+$gray-18000:                                                #ecedf2;
+$gray-19000:                                                #333e484d;
+$gray-20000:                                                #7d7d7d;
+$gray-21000:                                                #686c6f;
+$gray-22000:                                                #d8d8d8;
+$gray-23000:                                                #aeaeae;
+$gray-24000:                                                #ececec;
+$gray-25000:                                                #acacac;
+$gray-26000:                                                #dfdfdf;
+$gray-27000:                                                #575560;
+$gray-28000:                                                #dcdcdc;
+$gray-29000:                                                #d6dbe1;
+$gray-30000:                                                #b0b0b0;
+$gray-31000:                                                #262626;
+$gray-32000:                                                #a7a7a7;
+$gray-33000:                                                #747474;
+$gray-34000:                                                #818181;
+$gray-35000:                                                #f1f1f1;
+$gray-36000:                                                #d7d7d7;
+$gray-37000:                                                #eceeef;
+$gray-38000:                                                #efecec;
+$gray-39000:                                                #434343;
+$gray-40000:                                                #b9b9b9;
+$gray-41000:                                                #989898;
+$gray-42000:                                                #f7f7f7;
+$gray-43000:                                                #b5b5b5;
+$gray-44000:                                                #9f9f9f;
 
 
-$white-1:#f1f3f5;
-$white-2:#eaedef;
-$white-3:#e7eaec;
-$white-4:#dee2e6;
-$white-5:#cfd4da;
 
-$headings-line-height: 1;
+// Colors
+$yellow:                                                    #fed700;
+$dark:                                                      $gray-90;
+$black:                                                     #000000;
+$blue:                                                      #0062bd;
+$blue-light:                                                #66afe9;
+$cyan:                                                      #34bcec;
+$green:                                                     #5cb85c;
+$red:                                                       #ee0000;
+$sale:                                                      #df3737;
+$slider-bg:                                                 #eef7f9;
+
+// Theme Colors
+$primary:                                                   $yellow;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "dark":       $dark,
+    "cyan":       $cyan,
+    "sale":       $sale,
+    "black":      $black,
+    "green":      $green,
+    "red":        $red,
+    "gray-1":     $gray-2000, //#f5f5f5
+    "gray-2":     $gray-4000, //#383838
+    "gray-3":     $gray-5000, //#eeeeee
+    "gray-4":     $gray-6000, //#e6e6e6
+    "gray-5":     $gray-8000, //#878787
+    "gray-6":     $gray-9000, //#848484
+    "gray-7":     $gray-10000, //#f9f9f9
+    "gray-8":     $gray-11000, //#7b8186
+    "gray-9":     $gray-12000, //#8f8f8f
+    "gray-13":    $gray-13000, //#f8f8f8
+    "gray-14":    $gray-14000, //#eaeaea
+    "gray-15":    $gray-16000, //#7c7c7c
+    "gray-16":    $gray-17000, //#606060
+    "gray-17":    $gray-18000, //#ecedf2
+    "gray-18":    $gray-19000 //#333e484d
+  ),
+  $theme-colors
+);
+
+
+// Breakpoints
+// =========================================================
+
+$xs:                                                        0;
+$sm:                                                        576px;
+$md:                                                        768px;
+$lg:                                                        992px;
+$xl:                                                        1200px;
+$wd:                                                        1480px; /* EOC */
+
+$grid-breakpoints: (
+  xs:                                                       $xs,
+  sm:                                                       $sm,
+  md:                                                       $md,
+  lg:                                                       $lg,
+  xl:                                                       $xl,
+  wd:                                                       $wd /* EOC */
+);
+
+
+// Grid containers
+// =========================================================
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  wd: 1430px /* EOC */
+) ;
+
+
+// Spacing
+//
+
+// stylelint-disable
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  0dot5:($spacer * .143),
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 2.5),
+  7: ($spacer * 3),
+  8: ($spacer * 3.5),
+  9: ($spacer * 4),
+  10: ($spacer * 4.5),
+  11: ($spacer * 5),
+  12: ($spacer * 5.5),
+  13: ($spacer * 6),
+  14: ($spacer * 6.5),
+  15: ($spacer * 7),
+  16: ($spacer * 8),
+  17: ($spacer * 9),
+  18: ($spacer * 10),
+  19: ($spacer * 10.6),
+  20: ($spacer * 12.4)
+), $spacers);
+
+// Body
+// =========================================================
+// Settings for the `<body>` element.
+
+$body-color:                $gray-90;
+
+
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+$font-size-base: .875rem; // Assumes the browser default, typically 16px
+$font-electro: "font-electro";
+
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
